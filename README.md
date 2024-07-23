@@ -1,8 +1,13 @@
+## Projeto
+Api para listar dados de jogadores da Champions League.   
+Projeto desenvolvido durante a Formacão Node.js da Digital Innovation One
+
 ## Arquitetura
 ![modelagem.png](img/modelagem.png)
 
 - ## Tecnologias Utilizadas
 - TypeScript: Linguagem de programação utilizada para o desenvolvimento do projeto.
+- Express: Framework
 - Tsup: Ferramenta de construção e empacotamento para projetos TypeScript.
 - Tsx: Compilador TypeScript que suporta a construção de projetos.
 - Node.js: Ambiente de execução JavaScript que permite executar código JavaScript do lado do servidor.
