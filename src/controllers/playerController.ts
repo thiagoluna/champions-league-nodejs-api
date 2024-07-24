@@ -13,3 +13,10 @@ export const getPlayerById = async (req: Request, res: Response) => {
 
     res.status(data.statusCode).json(data.body);
 };
+
+export const storePlayer = async (req: Request, res: Response) => {
+    const playerData = req.body;
+    const data = await playerService.storePlayer(playerData);
+
+    res.status(data.statusCode).json(data.body);
+}
