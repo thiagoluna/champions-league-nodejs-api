@@ -24,6 +24,13 @@ export const noContent = async (): Promise<HttpResponse> => {
 export const badRequest = async (): Promise<HttpResponse> => {
     return {
         statusCode: 400,
-        body: { message: "Error to save a player"},
+        body: { message: "Error to save data"},
+    }
+}
+
+export const notFound = async (): Promise<HttpResponse> => {
+    return {
+        statusCode: 404,
+        body: { message: "Not Found"},
     }
 }

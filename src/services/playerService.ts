@@ -25,3 +25,9 @@ export const storePlayer = async (playerData: PlayerModel) => {
 
     return await HttpResponse.created();
 }
+
+export const deletePlayer = async (id: number) => {
+    const result = await playerRepository.deletePlayer(id);
+
+    return result ? await HttpResponse.ok({ message: "data deleted" }) : await HttpResponse.notFound();
+}

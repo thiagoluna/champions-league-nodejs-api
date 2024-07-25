@@ -20,3 +20,10 @@ export const storePlayer = async (req: Request, res: Response) => {
 
     res.status(data.statusCode).json(data.body);
 }
+
+export const deletePlayer = async (req: Request, res: Response) => {
+    const id = parseInt(req.params.id);
+    const data = await playerService.deletePlayer(id);
+
+    res.status(data.statusCode).json(data.body);
+}

@@ -175,3 +175,14 @@ export const findPlayerById = async (id: number): Promise<PlayerModel | undefine
 export const storePlayer = async (playerData: PlayerModel) => {
     database.push(playerData);
 }
+
+export const deletePlayer = async (id: number): Promise<boolean> => {
+    const index = database.findIndex((player) => player.id === id );
+    if (index !== -1) {
+        database.splice(index,1);
+
+        return true;
+    }
+
+    return false;
+};
